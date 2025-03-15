@@ -65,6 +65,10 @@ Please follow the steps carefully and read each command before executing.
 aws s3api create-bucket --bucket kops-abhi-storage --region us-east-1
 ```
 
+##### Route53 cmd to domain from local to specific domain::: (OPTIONAL depends upon organisation)::
+aws route53 create-hosted-zone --name dev.example.com --caller-reference-1
+
+
 ### Create the cluster 
 
 ```
@@ -76,7 +80,6 @@ kops create cluster --name=demok8scluster.k8s.local --state=s3://kops-abhi-stora
 ```
 kops edit cluster myfirstcluster.k8s.local
 ```
-
 Step 12: Build the cluster
 
 ```
